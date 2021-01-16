@@ -5,6 +5,10 @@
     <title>Gallery</title>
 </head>
 <body>
-    <h1>Galley View</h1>
+    <h1>Gallery</h1>
+
+    {% for image in  images_for_platform %}
+        <img src="{{ image.image.url }}" alt="image" width="300px" height="auto">
+    {% endfor %}
 </body>
 </html>
