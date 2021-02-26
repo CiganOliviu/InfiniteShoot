@@ -8,8 +8,8 @@ class PlatformPresentationImageAdmin(admin.ModelAdmin):
 
 class ImagesClientAdmin(admin.ModelAdmin):
     list_display = ('client', 'name', 'column')
+    prepopulated_fields = {'image_slug': ('name', )}
 
 
 admin.site.register(PlatformPresentationImage, PlatformPresentationImageAdmin)
 admin.site.register(ImagesClient, ImagesClientAdmin)
-

@@ -1,0 +1,40 @@
+{% extends 'layouts/main_layout.html' %}
+
+{% block head %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/gallery_style.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="col-lg-6">
+            <div class="detail_image">
+                <img src="{{ imagesclient.image.url }}" alt="">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="our-thoughts">
+                <h2>{{ imagesclient.name }}</h2>
+                <div>&nbsp;</div>
+                <p>{{ imagesclient.our_thoughts }}</p>
+            </div>
+            <div>&nbsp;</div>
+            <div class="form" align="center">
+                <form method="post">
+                    <h2>Do you want this image to be: </h2>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div>&nbsp;</div>
+                    <button type="submit">Send your data</button>
+                </form>
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

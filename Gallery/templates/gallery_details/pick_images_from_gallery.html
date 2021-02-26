@@ -47,16 +47,8 @@
         <div class="container-fluid" align="center">
             <div class="col-lg-12">
                 <div class="part-parallax-introduction">
-                    <h1>Check out your gallery!</h1>
+                    <h1>Pick your preferred photos for the album!</h1>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container" align="center">
-        <div class="col-lg-12">
-            <div class="highlight">
-                <a href="{% url 'choose_preferred_photos' %}">Pick your preferred photos for the album</a>
             </div>
         </div>
     </div>
@@ -65,39 +57,37 @@
 
     <div class="container-fluid">
         <div class="col-lg-12">
-            <div class="tz-gallery">
                 <div class="row">
                     <div class="column">
                         {% for image in  images_first_column_client_query %}
-                                <a class="lightbox" href="{{ image.image.url }}">
-                                    <img src="{{ image.image.url }}" alt="image" >
-                                </a>
+                            <img class="picked_image_style" src="{{ image.image.url }}" alt="image"
+                                 onclick="location.href='{% url 'choose_preferred_photos_detail_view' image.image_slug %}';"
+                                 style="cursor:pointer;">
                         {% endfor %}
                     </div>
                     <div class="column">
                         {% for image in  images_second_column_client_query %}
-                                <a class="lightbox" href="{{ image.image.url }}">
-                                    <img src="{{ image.image.url }}" alt="image" >
-                                </a>
+                            <img class="picked_image_style" src="{{ image.image.url }}" alt="image"
+                                 onclick="location.href='{% url 'choose_preferred_photos_detail_view' image.image_slug %}';"
+                                 style="cursor:pointer;">
                         {% endfor %}
                     </div>
                     <div class="column">
                         {% for image in  images_third_column_client_query %}
-                                <a class="lightbox" href="{{ image.image.url }}">
-                                    <img src="{{ image.image.url }}" alt="choose_preferred_photosimage" >
-                                </a>
+                            <img class="picked_image_style" src="{{ image.image.url }}" alt="image"
+                                 onclick="location.href='{% url 'choose_preferred_photos_detail_view' image.image_slug %}';"
+                                 style="cursor:pointer;">
                         {% endfor %}
                     </div>
                     <div class="column">
                         {% for image in  images_fourth_column_client_query %}
-                                <a class="lightbox" href="{{ image.image.url }}">
-                                    <img src="{{ image.image.url }}" alt="image" >
-                                </a>
+                            <img class="picked_image_style" src="{{ image.image.url }}" alt="image"
+                                 onclick="location.href='{% url 'choose_preferred_photos_detail_view' image.image_slug %}';"
+                                 style="cursor:pointer;">
                         {% endfor %}
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 
     {% load static %}

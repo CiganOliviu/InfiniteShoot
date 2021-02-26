@@ -48,12 +48,27 @@
 }
 
 .column img {
-  width: 100%;
-  margin-top: 8px;
-  vertical-align: middle;
+    width: 100%;
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+.column .picked_image_style {
+    width: 100%;
+    margin-top: 8px;
+    vertical-align: middle;
+    transition: all 300ms ease;
+}
+
+.column .picked_image_style:hover {
+    opacity: 0.5;
 }
 
 .highlight a {
     font-size: 27px;
     padding: 2%;
+}
+
+.detail_image img {
+    width: 80%;
 }
