@@ -150,6 +150,12 @@ a:visited {
     transition: background-color 0.2s linear;
 }
 
+.nav-container.hundred-solid-nav {
+    background-color: #000000;
+    opacity: 0.9;
+    transition: background-color 0.2s linear;
+}
+
 .nav-container .nav-row {
     width: 100%;
     margin: 0 auto;
@@ -709,4 +715,9 @@ a:visited {
 .blog-content p {
 
     font-size: 18px;
+}
+
+.padding {
+    margin-top: 8%;
+    margin-bottom: 8%;
 }
