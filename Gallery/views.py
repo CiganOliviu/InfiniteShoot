@@ -81,7 +81,7 @@ class ChoosePreferredPhotosDetailView(LoginRequiredMixin, FormMixin, generic.Det
     form_class = ImageClientForm
 
     def get_success_url(self):
-        pass
+        return reverse('choose_preferred_photos')
 
     def get_context_data(self, **kwargs):
         context = super(ChoosePreferredPhotosDetailView, self).get_context_data(**kwargs)
