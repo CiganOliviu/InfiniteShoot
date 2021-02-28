@@ -8,8 +8,7 @@
 
 {% block content %}
 
-    <div>
-
+    <div class="parallax_gallery">
         <input type="checkbox" id="nav" class="hidden"/>
         <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
 
@@ -63,6 +62,7 @@
             <div class="form" align="center">
                 <form method="post">
                     <h2>Do you want this image to be: </h2>
+                    <div>&nbsp;</div>
                     {% csrf_token %}
                     {{ form.as_p }}
                     <div>&nbsp;</div>
@@ -80,6 +80,6 @@
     </div>
 
     {% load static %}
-    <script type="text/javascript" language="JavaScript" src="{% static 'js/image_detail_solid_nav.js' %}"></script>
+    <script type="text/javascript" language="JavaScript" src="{% static 'js/image_detail_parallax-menu-opacity-on-scroll.js' %}"></script>
 
 {% endblock %}
