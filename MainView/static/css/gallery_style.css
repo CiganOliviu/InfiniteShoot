@@ -1,5 +1,5 @@
 .parallax_gallery {
-    height: 60vh;
+    height: 70vh;
     width: 100%;
     background-image: url("../imgs/parallax_gallery.jpg");
     background-repeat: no-repeat;
@@ -80,4 +80,14 @@
 
 .our-thoughts p {
     font-size: 18px;
+}
+
+.empty_parallax_setup {
+    height: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    background-position: 50% 50%;
 }
