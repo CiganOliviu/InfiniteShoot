@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = '#s-%wzd21yl-*@a1^t*a3!3e^_mc*k0k4d1z8kt8ih#xoyq=1w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -132,4 +132,4 @@ EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
 
 MEDIA_URL = '/MEDIA/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'MEDIA')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'MEDIA/')
