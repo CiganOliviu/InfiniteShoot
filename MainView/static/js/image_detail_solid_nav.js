@@ -1,1 +1,0 @@
-$('.nav-container').addClass('hundred-solid-nav');
